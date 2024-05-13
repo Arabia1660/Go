@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Enter the size of array: ")
+	var size int
+	fmt.Scanln(&size)
+	fmt.Println("The array size is : ", size)
+	fmt.Println("Enter the element of array : ")
+	array := make([]int, size)
+	for i := 0; i < size; i++ {
+		fmt.Scanln(&array[i])
+
+	}
+	for i, value := range array {
+		fmt.Println("The index of array elements is : ", i, value)
+	}
+	fmt.Println(" The given array is : ", array)
+}
