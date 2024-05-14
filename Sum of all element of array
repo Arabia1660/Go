@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func main() {
+	size := 0
+	sum := 0
+	fmt.Println("Enter the size of array ")
+	fmt.Scanln(&size)
+	fmt.Println("The array size is : ", size)
+	fmt.Println("Enter the element of array ")
+
+	array := make([]int, size)
+	for i := 0; i < size; i++ {
+
+		fmt.Scanln(&array[i])
+
+	}
+	for i, value := range array {
+		fmt.Println("  ", i, ":", value)
+	}
+	for _, num := range array {
+
+		sum += num
+	}
+	fmt.Println(" sumation of all element is :  ", sum)
+	fmt.Println("The given array element is : ", array)
+	fmt.Println("array index ", array[3])
+	result := array[2] + array[3]
+
+	fmt.Println("sum of element:", result)
+}
